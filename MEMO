@@ -1,0 +1,38 @@
+// 例題1個目
+select * from users where id = 5;
+
+// 例題2個目
+select * from users order by level desc limit 3;
+
+// 例題3個目
+select create_date, count(id) from battle_log where create_date = "2025-01-05"  group by create_date;
+
+
+//再起動
+down と upでよい
+
+
+//Dockerfileと.ymlを変更したら使う（？）
+(略)\docker-lamp> docker stop $(docker ps -q)
+(略)\docker-lamp> docker rm $(docker ps -q -a)
+(略)\docker-lamp> docker rmi $(docker images -q)
+(略)\docker-lamp> docker volume rm $(docker volume ls -qf dangling=true)
+
+PS D:\Docker\Projects\docker-lamp> docker-compose up -d --build
+
+PS (略)\docker-lamp> docker-compose exec mysql bash
+
+// MySQL [(none)]> select user,host from mysql.user;
+// docker-compose exec mysql bash 
+// bash-4.2# ls -l /root/
+// bash-4.2# mysql -uroot -p < /root/initialize.sql
+
+// 実施1リンク
+// http://localhost/get_students.php
+
+// 実施2リンク
+// http://localhost/register_form.html
+
+// 実施3リンク
+// http://localhost/get_students.php
+
