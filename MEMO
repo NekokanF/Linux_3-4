@@ -36,3 +36,7 @@ PS (略)\docker-lamp> docker-compose exec mysql bash
 // 実施3リンク
 // http://localhost/get_students.php
 
+
+db.phpで処理を行いその後gacha.phpにインクルード(require_once)で持ってくる
+
+
